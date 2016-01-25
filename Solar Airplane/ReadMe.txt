@@ -7,7 +7,8 @@
   Project Solar Airplane
   Created by Sage Thayer on 1/24/16
   Copyright © 2016 Sage Thayer
-  Licence <#licence#>
+  Licence	  Beerware: Use this software as you wish.
+              If you like it, buy me a beer somtime :)
 
 
 

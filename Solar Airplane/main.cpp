@@ -11,7 +11,8 @@
 //              Sage Thayer
 //
 // Copyright 	© Sage Thayer, 2016
-// Licence 		<#licence#>
+// Licence		Beerware: Use this software as you wish.
+//              If you like it, buy me a beer somtime :)
 //
 // See 			Solar Airplane.ino and ReadMe.txt for references
 //

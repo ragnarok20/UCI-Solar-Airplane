@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		D1063B721C55E46D005C3C7D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1063B711C55E46D005C3C7D /* main.cpp */; };
 		D1063B741C55E46D005C3C7D /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = D1063B731C55E46D005C3C7D /* Makefile */; };
+		D1063C051C55E545005C3C7D /* LinearControllers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1063C031C55E545005C3C7D /* LinearControllers.cpp */; };
+		D1063C081C55E624005C3C7D /* Flight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1063C061C55E624005C3C7D /* Flight.cpp */; };
+		D1063C121C55E6E8005C3C7D /* gpio.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1063C101C55E6E8005C3C7D /* gpio.cpp */; };
+		D1063C191C55E7F7005C3C7D /* I2Cdev.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1063C131C55E7F7005C3C7D /* I2Cdev.cpp */; };
+		D1063C1A1C55E7F7005C3C7D /* MadgwickAHRS.c in Sources */ = {isa = PBXBuildFile; fileRef = D1063C151C55E7F7005C3C7D /* MadgwickAHRS.c */; };
+		D1063C1B1C55E7F7005C3C7D /* MPU9250.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D1063C171C55E7F7005C3C7D /* MPU9250.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -131,7 +137,19 @@
 		D1063BEA1C55E46D005C3C7D /* embedXcode_chrono */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = embedXcode_chrono; path = Utilities/embedXcode_chrono; sourceTree = "<group>"; };
 		D1063BEB1C55E46D005C3C7D /* TemplateIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TemplateIcon.icns; path = Utilities/TemplateIcon.icns; sourceTree = "<group>"; };
 		D1063BEC1C55E46D005C3C7D /* uploader_izmir.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = uploader_izmir.sh; path = Utilities/uploader_izmir.sh; sourceTree = "<group>"; };
-		D1063BED1C55E46D005C3C7D /* Solar_Airplane.ino */ = {isa = PBXFileReference; lastKnownFileType = text; path = Solar_Airplane.ino; sourceTree = "<group>"; };
+		D1063BED1C55E46D005C3C7D /* Solar_Airplane.ino */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; path = Solar_Airplane.ino; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		D1063C031C55E545005C3C7D /* LinearControllers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LinearControllers.cpp; path = src/LinearControllers.cpp; sourceTree = "<group>"; };
+		D1063C041C55E545005C3C7D /* LinearControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LinearControllers.h; path = src/LinearControllers.h; sourceTree = "<group>"; };
+		D1063C061C55E624005C3C7D /* Flight.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Flight.cpp; path = src/Flight.cpp; sourceTree = "<group>"; };
+		D1063C071C55E624005C3C7D /* Flight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Flight.h; path = src/Flight.h; sourceTree = "<group>"; };
+		D1063C101C55E6E8005C3C7D /* gpio.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = gpio.cpp; path = src/gpio.cpp; sourceTree = "<group>"; };
+		D1063C111C55E6E8005C3C7D /* gpio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gpio.h; path = src/gpio.h; sourceTree = "<group>"; };
+		D1063C131C55E7F7005C3C7D /* I2Cdev.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = I2Cdev.cpp; path = src/Drivers/I2Cdev.cpp; sourceTree = "<group>"; };
+		D1063C141C55E7F7005C3C7D /* I2Cdev.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = I2Cdev.h; path = src/Drivers/I2Cdev.h; sourceTree = "<group>"; };
+		D1063C151C55E7F7005C3C7D /* MadgwickAHRS.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = MadgwickAHRS.c; path = src/Drivers/MadgwickAHRS.c; sourceTree = "<group>"; };
+		D1063C161C55E7F7005C3C7D /* MadgwickAHRS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MadgwickAHRS.h; path = src/Drivers/MadgwickAHRS.h; sourceTree = "<group>"; };
+		D1063C171C55E7F7005C3C7D /* MPU9250.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MPU9250.cpp; path = src/Drivers/MPU9250.cpp; sourceTree = "<group>"; };
+		D1063C181C55E7F7005C3C7D /* MPU9250.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPU9250.h; path = src/Drivers/MPU9250.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -154,6 +172,7 @@
 		D1063B701C55E46D005C3C7D /* Solar Airplane */ = {
 			isa = PBXGroup;
 			children = (
+				D1063C021C55E4AB005C3C7D /* src */,
 				D1063B711C55E46D005C3C7D /* main.cpp */,
 				D1063B731C55E46D005C3C7D /* Makefile */,
 				D1063B751C55E46D005C3C7D /* ReadMe.txt */,
@@ -309,6 +328,33 @@
 			name = Utilities;
 			sourceTree = "<group>";
 		};
+		D1063C021C55E4AB005C3C7D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				D1063C0C1C55E67E005C3C7D /* drivers */,
+				D1063C031C55E545005C3C7D /* LinearControllers.cpp */,
+				D1063C041C55E545005C3C7D /* LinearControllers.h */,
+				D1063C061C55E624005C3C7D /* Flight.cpp */,
+				D1063C071C55E624005C3C7D /* Flight.h */,
+				D1063C101C55E6E8005C3C7D /* gpio.cpp */,
+				D1063C111C55E6E8005C3C7D /* gpio.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		D1063C0C1C55E67E005C3C7D /* drivers */ = {
+			isa = PBXGroup;
+			children = (
+				D1063C131C55E7F7005C3C7D /* I2Cdev.cpp */,
+				D1063C141C55E7F7005C3C7D /* I2Cdev.h */,
+				D1063C151C55E7F7005C3C7D /* MadgwickAHRS.c */,
+				D1063C161C55E7F7005C3C7D /* MadgwickAHRS.h */,
+				D1063C171C55E7F7005C3C7D /* MPU9250.cpp */,
+				D1063C181C55E7F7005C3C7D /* MPU9250.h */,
+			);
+			name = drivers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
@@ -451,7 +497,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1063C051C55E545005C3C7D /* LinearControllers.cpp in Sources */,
+				D1063C081C55E624005C3C7D /* Flight.cpp in Sources */,
+				D1063C191C55E7F7005C3C7D /* I2Cdev.cpp in Sources */,
+				D1063C1A1C55E7F7005C3C7D /* MadgwickAHRS.c in Sources */,
 				D1063B741C55E46D005C3C7D /* Makefile in Sources */,
+				D1063C121C55E6E8005C3C7D /* gpio.cpp in Sources */,
+				D1063C1B1C55E7F7005C3C7D /* MPU9250.cpp in Sources */,
 				D1063B721C55E46D005C3C7D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
