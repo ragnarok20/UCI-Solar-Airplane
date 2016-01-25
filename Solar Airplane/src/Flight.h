@@ -68,7 +68,7 @@ public:
 protected:
     //inertial Dynamics
     int mass;   //in grams
-    int I;      //in grams*cm^2
+    int i;      //in grams*cm^2
     
     // linear dynamics
     float x,y,z;    //pos
