@@ -22,22 +22,21 @@
 #include "LinearControllers.h"
 
 // Code
-
 // Constructors and overloads
-PIDController::PIDController(unsigned long differentialTime, float Kp, float Kd, float Ki) {
+template <class TT> PIDController<TT>::PIDController(unsigned long differentialTime, float Kp, float Kd, float Ki) {
     //constructor overload. set private vars
     dt = differentialTime;
     itsKp = Kp; itsKd = Kd; itsKi = Ki;   // controller gains:: Kp: porportional, Kd: derivative, Ki: integral
 }
 
-PIDController::PIDController(unsigned long differentialTime, float Kp, float Kd, float Ki, int desiredOutput) {
+template <class TT> PIDController<TT>::PIDController(unsigned long differentialTime, float Kp, float Kd, float Ki, TT desiredOutput) {
     //constructor overload. set private vars
     dt = differentialTime;
     itsKp = Kp; itsKd = Kd; itsKi = Ki;   // controller gains:: Kp: porportional, Kd: derivative, Ki: integral
     itsDesiredOutput = desiredOutput;
 }
 
-PIDController::PIDController(unsigned long differentialTime, float Kp, float Kd, float Ki, int desiredOutput, int feedback) {
+template <class TT> PIDController<TT>::PIDController(unsigned long differentialTime, float Kp, float Kd, float Ki, TT desiredOutput, TT feedback) {
     //constructor overload. set private vars
     dt = differentialTime;
     itsKp = Kp; itsKd = Kd; itsKi = Ki;   // controller gains:: Kp: porportional, Kd: derivative, Ki: integral
@@ -47,19 +46,18 @@ PIDController::PIDController(unsigned long differentialTime, float Kp, float Kd,
 
 // Methods
 
-void PIDController::setGains(float Kp, float Kd, float Ki) {
+template <class TT> void PIDController<TT>::setGains(float Kp, float Kd, float Ki) {
     itsKp = Kp; itsKd = Kd; itsKi = Ki; // controller gains:: Kp: porportional, Kd: derivative, Ki: integral
 }
 
-void PIDController::setDesiredOuptut(int desiredOutput) {
+template <class TT> void PIDController<TT>::setDesiredOuptut(TT desiredOutput) {
     itsDesiredOutput = desiredOutput;
 }
-void PIDController::setFeedback(int feedback) {
+template <class TT> void PIDController<TT>::setFeedback(TT feedback) {
     itsFeedback = feedback;
 }
 
-void PIDController::getControlSignal(int *controlSignal) {
-    
+template <class TT> void PIDController<TT>::update() {
     // calculate errors
     itsPorportionalError = itsDesiredOutput - itsFeedback;
     itsDerivativeError = itsPorportionalError/dt;
@@ -67,6 +65,5 @@ void PIDController::getControlSignal(int *controlSignal) {
     itsIntegralError = itsIntegralError + (itsPorportionalError * dt); // compute the integral
     
     //put all together
-    *controlSignal = -itsKp*itsPorportionalError - itsKd*itsDerivativeError - itsKi*itsIntegralError;
-    
+    itsControlSignal = -itsKp*itsPorportionalError - itsKd*itsDerivativeError - itsKi*itsIntegralError;
 }

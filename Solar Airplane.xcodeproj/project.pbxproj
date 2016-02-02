@@ -150,6 +150,7 @@
 		D1063C161C55E7F7005C3C7D /* MadgwickAHRS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MadgwickAHRS.h; path = src/Drivers/MadgwickAHRS.h; sourceTree = "<group>"; };
 		D1063C171C55E7F7005C3C7D /* MPU9250.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MPU9250.cpp; path = src/Drivers/MPU9250.cpp; sourceTree = "<group>"; };
 		D1063C181C55E7F7005C3C7D /* MPU9250.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MPU9250.h; path = src/Drivers/MPU9250.h; sourceTree = "<group>"; };
+		D116DC251C602FDC008E8268 /* Vector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Vector.h; path = src/Vector.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -334,6 +335,7 @@
 				D1063C0C1C55E67E005C3C7D /* drivers */,
 				D1063C031C55E545005C3C7D /* LinearControllers.cpp */,
 				D1063C041C55E545005C3C7D /* LinearControllers.h */,
+				D116DC251C602FDC008E8268 /* Vector.h */,
 				D1063C061C55E624005C3C7D /* Flight.cpp */,
 				D1063C071C55E624005C3C7D /* Flight.h */,
 				D1063C101C55E6E8005C3C7D /* gpio.cpp */,
@@ -688,6 +690,7 @@
 				D1063BF21C55E46D005C3C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1063BF31C55E46D005C3C7D /* Build configuration list for PBXLegacyTarget "Build" */ = {
 			isa = XCConfigurationList;
@@ -696,6 +699,7 @@
 				D1063BF51C55E46D005C3C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1063BF61C55E46D005C3C7D /* Build configuration list for PBXLegacyTarget "Boards" */ = {
 			isa = XCConfigurationList;
@@ -704,6 +708,7 @@
 				D1063BF81C55E46D005C3C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1063BF91C55E46D005C3C7D /* Build configuration list for PBXLegacyTarget "Serial" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +717,7 @@
 				D1063BFB1C55E46D005C3C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1063BFC1C55E46D005C3C7D /* Build configuration list for PBXLegacyTarget "Upload" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +726,7 @@
 				D1063BFE1C55E46D005C3C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1063BFF1C55E46D005C3C7D /* Build configuration list for PBXNativeTarget "Index" */ = {
 			isa = XCConfigurationList;
@@ -728,6 +735,7 @@
 				D1063C011C55E46D005C3C7D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
