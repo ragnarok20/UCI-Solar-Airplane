@@ -52,33 +52,46 @@
 #   error Platform not defined
 #endif // end IDE
 
+#include "LinearControllers.h"
+#include "Vector.h"
+
 #ifndef Flight_cpp
 #define Flight_cpp
 
 // Rigid body Abstract Data Type
+// Rigid body Abstract Data Type
 class RigidBody {
 public:
     //constructors
-    Rigid();
-    virtual ~Rigid(){};
+    RigidBody();
+    virtual ~RigidBody(){};
     
-    virtual void setAttitude(int Yaw, int Pitch, int Roll);
+    //virtual methods to overload
+    virtual void setPosition(Vector3<float>& a) = 0;
+    virtual void setVelocity(Vector3<float>& a) = 0;
+    virtual void setAcceleration(Vector3<float>& a) = 0;
+    
+    virtual void setAttitude(Vector3<float>& a) = 0;
+    virtual void setAngularRates(Vector3<float>& a) = 0;
+    virtual void setAngularAccelerations(Vector3<float>& a) = 0;
+    
+    virtual void setInertias(int& mass, int& momentOfInertia) = 0;
     
     //accessors
 protected:
     //inertial Dynamics
-    int mass;   //in grams
-    int i;      //in grams*cm^2
+    int Mass;   //in grams
+    int I;      //in grams*cm^2
     
     // linear dynamics
-    float x,y,z;    //pos
-    float u,v,w;      //velocity
-    float u_dot,v_dot,w_dot;    //acceleration
+    Vector3<float> position;    //x,y,z
+    Vector3<float> velocity;      //u,v,w
+    Vector3<float> acceleration;
     
     //rotation dynamics
-    float yaw, pitch, roll;
-    float yaw_rate, pitch_rate, roll_rate;
-    float yaw_acc, pitch_acc, roll_acc;
+    Vector3<float> attitude;
+    Vector3<float> angular_rates;
+    Vector3<float> angular_acc;
     
 };
 
